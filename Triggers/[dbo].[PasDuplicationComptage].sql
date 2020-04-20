@@ -1,11 +1,11 @@
 USE [Betterave]
 GO
 
-/****** Object:  Trigger [PasDuplicationComptage]    Script Date: 20/04/2020 12:27:23 ******/
+/****** Object:  Trigger [PasDuplicationComptage]    Script Date: 20/04/2020 14:39:32 ******/
 DROP TRIGGER [dbo].[PasDuplicationComptage]
 GO
 
-/****** Object:  Trigger [dbo].[PasDuplicationComptage]    Script Date: 20/04/2020 12:27:24 ******/
+/****** Object:  Trigger [dbo].[PasDuplicationComptage]    Script Date: 20/04/2020 14:39:32 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -42,17 +42,29 @@ BEGIN
 					join inserted i
 					on i.idEspece = ezp.idEspece and i.idZone=ezp.idZone
 					where i.idEspece = ezp.idEspece and i.idZone = ezp.idZone)
+
 			begin
-				declare @idEspece int, @idZone int, @date date
+				declare @idEspece int, @idZone int, @date date, @nbIndividus int
 
-				SET @idEspece = (select idEspece from inserted)
-				SET @idZone = (select idZone from inserted)
-				SET @date = (select dateRencontre from inserted)
+				declare cur cursor static local for
+					select idEspece, idZone, dateRencontre, nbIndividus from inserted
 
-				insert into Especes_Has_ZonePrelevements 
-				(idEspece, idZone, dateRencontre)
-				VALUES (@idEspece,@idZone,@date);
+				open cur
 
+				fetch next from cur into @idEspece, @idZone, @date, @nbIndividus
+
+				while @@FETCH_STATUS=0
+
+				begin
+					insert into Especes_Has_ZonePrelevements 
+					(idEspece, idZone, dateRencontre, nbIndividus)
+					VALUES (@idEspece,@idZone,@date,@nbIndividus)
+
+					fetch next from cur into @idEspece, @idZone, @date, @nbIndividus
+				end
+
+				close cur
+				deallocate cur
 			end
 		end
 END
