@@ -1,6 +1,6 @@
 USE [Betterave]
 GO
-/****** Object:  Trigger [dbo].[AnnulerToutPrelevementsEtudeTerminee]    Script Date: 20/04/2020 10:34:44 ******/
+/****** Object:  Trigger [dbo].[AnnulerToutPrelevementsEtudeTerminee]    Script Date: 20/04/2020 10:47:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -31,7 +31,7 @@ BEGIN
 
             UPDATE Prelevements 
 			SET estAbandonnee = 1
-			WHERE idEtude = @idEtudeInseree
+			WHERE idEtude = @idEtudeInseree and estTermine = 0
 
         end
     end

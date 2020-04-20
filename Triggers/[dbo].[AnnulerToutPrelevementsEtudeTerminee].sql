@@ -1,11 +1,11 @@
 USE [Betterave]
 GO
 
-/****** Object:  Trigger [AnnulerToutPrelevementsEtudeTerminee]    Script Date: 20/04/2020 10:27:56 ******/
+/****** Object:  Trigger [AnnulerToutPrelevementsEtudeTerminee]    Script Date: 20/04/2020 10:49:34 ******/
 DROP TRIGGER [dbo].[AnnulerToutPrelevementsEtudeTerminee]
 GO
 
-/****** Object:  Trigger [dbo].[AnnulerToutPrelevementsEtudeTerminee]    Script Date: 20/04/2020 10:27:56 ******/
+/****** Object:  Trigger [dbo].[AnnulerToutPrelevementsEtudeTerminee]    Script Date: 20/04/2020 10:49:34 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -38,7 +38,7 @@ BEGIN
 
             UPDATE Prelevements 
 			SET estAbandonnee = 1
-			WHERE idEtude = @idEtudeInseree
+			WHERE idEtude = @idEtudeInseree and estTermine = 0
 
         end
     end
