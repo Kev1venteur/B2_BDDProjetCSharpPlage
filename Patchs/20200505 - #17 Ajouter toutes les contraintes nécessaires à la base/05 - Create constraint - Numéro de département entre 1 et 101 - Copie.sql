@@ -11,7 +11,7 @@ COMMIT
 BEGIN TRANSACTION
 GO
 ALTER TABLE dbo.Departements ADD CONSTRAINT
-	CK_Departements CHECK (numero > 0 and numero <= 101)
+	CK_Departements CHECK (([id]>(0) AND [id]<=(101)))
 GO
 ALTER TABLE dbo.Departements SET (LOCK_ESCALATION = TABLE)
 GO

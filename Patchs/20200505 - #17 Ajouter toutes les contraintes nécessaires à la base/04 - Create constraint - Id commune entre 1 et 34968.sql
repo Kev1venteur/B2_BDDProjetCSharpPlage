@@ -10,10 +10,10 @@ SET ANSI_WARNINGS ON
 COMMIT
 BEGIN TRANSACTION
 GO
-ALTER TABLE dbo.Departements ADD CONSTRAINT
-	CK_Departements CHECK (id > 0 and id <= 101)
+ALTER TABLE dbo.Communes ADD CONSTRAINT
+	CK_Communes CHECK (id > 0 and id <= 34968)
 GO
-ALTER TABLE dbo.Departements SET (LOCK_ESCALATION = TABLE)
+ALTER TABLE dbo.Communes SET (LOCK_ESCALATION = TABLE)
 GO
 COMMIT
-select Has_Perms_By_Name(N'dbo.Departements', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'CONTROL') as Contr_Per 
+select Has_Perms_By_Name(N'dbo.Communes', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Communes', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Communes', 'Object', 'CONTROL') as Contr_Per 
