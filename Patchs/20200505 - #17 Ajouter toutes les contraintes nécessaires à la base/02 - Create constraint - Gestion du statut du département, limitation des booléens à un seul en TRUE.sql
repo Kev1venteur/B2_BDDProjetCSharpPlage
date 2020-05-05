@@ -10,10 +10,7 @@ SET ANSI_WARNINGS ON
 COMMIT
 BEGIN TRANSACTION
 GO
-ALTER TABLE dbo.Departements ADD CONSTRAINT
-	CK_Departements CHECK (id > 0 and id <= 101)
-GO
-ALTER TABLE dbo.Departements SET (LOCK_ESCALATION = TABLE)
+ALTER TABLE dbo.Prelevements ADD CONSTRAINT
+	CK_Prelevements CHECK (estTermine = 1 and estAbandonne = 0 and estEncours = 0 OR estTermine = 0 and estAbandonne = 1 and estEncours = 0 OR estTermine = 0 and estAbandonne = 0 and estEncours = 1)
 GO
 COMMIT
-select Has_Perms_By_Name(N'dbo.Departements', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'CONTROL') as Contr_Per 
