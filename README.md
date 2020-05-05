@@ -25,7 +25,7 @@ Retrieve the project locally :
    `git clone https://augustinribreau@dev.azure.com/augustinribreau/Betterave/_git/Betterave`
 3. Run <a href="https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">SSMS<a>.
 4. <b> Run <a href="https://dev.azure.com/augustinribreau/_git/Betterave?path=%2FScript_De_D%C3%A9part%2FScript_De_Depart.sql">Start_Script.sql</a></b> first.
-5. Open all files in the folder <a href="https://dev.azure.com/augustinribreau/_git/Betterave?path=%2FPatchs">"Patchs"</a>. Then execute (Shortcut: F5).
+5. Open all files in the folder <a href="https://dev.azure.com/augustinribreau/_git/Betterave?path=%2FPatchs">"Patchs"</a>. Then execute them in chronological order (Shortcut: F5).
 
 <br />
 
