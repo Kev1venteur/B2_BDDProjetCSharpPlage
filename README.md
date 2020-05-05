@@ -1,20 +1,39 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Betterave
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Betterave is a second year project by Kévin Gillet and Augustin Ribreau.
+<br>
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Introduction
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+The following instructions will allow you to set up the project on your computer.
+<br>
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### Prerequisites
+
+<ul>
+  <li><a href="https://git-scm.com/">Git</a></li>
+  <li><a href="https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">SSMS</a></li>
+  <li><a href="https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads">SQL Server</a></li>
+</ul>
+<br />
+### Getting Started
+
+Retrieve the project locally :
+
+1. Open your favorite terminal (<a href="https://fr.wikipedia.org/wiki/Cmd">cmd</a>).
+2. Execute the following command:
+   `git clone https://augustinribreau@dev.azure.com/augustinribreau/Betterave/_git/Betterave`
+3. Run <a href="https://docs.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">SSMS<a>.
+4. <b> Run <a href="https://dev.azure.com/augustinribreau/_git/Betterave?path=%2FScript_De_D%C3%A9part%2FScript_De_Depart.sql">Start_Script.sql</a></b> first.
+5. Open all files in the folder <a href="https://dev.azure.com/augustinribreau/_git/Betterave?path=%2FPatchs">"Patchs"</a>. Then execute them in chronological order (Shortcut: F5).
+
+<br />
+
+## How to contribute
+
+Just send a pull-request 😉
+
+## Authors
+
+- <b>Augustin Ribreau</b> - <i>Developpeur</i> - [augustin.ribreau.co](https://augustin.ribreau.co/)
+- <b>Kévin Gillet</b> - <i>Developpeur</i> - [gillet.site](http://gillet.site/)
