@@ -1,19 +1,13 @@
 USE [Betterave]
 GO
-
-/****** Object:  UserDefinedFunction [dbo].[GetIndividuParFamille]    Script Date: 05/05/2020 13:40:24 ******/
-DROP FUNCTION [dbo].[GetIndividuParFamille]
-GO
-
-/****** Object:  UserDefinedFunction [dbo].[GetIndividuParFamille]    Script Date: 05/05/2020 13:40:24 ******/
+/****** Object:  UserDefinedFunction [dbo].[GetIndividuParFamille]    Script Date: 05/05/2020 13:25:02 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
 
-CREATE FUNCTION [dbo].[GetIndividuParFamille]
+ALTER FUNCTION [dbo].[GetIndividuParFamille]
 (    
     @idEtude int,
     @idPlage int
@@ -29,4 +23,3 @@ RETURN
     WHERE pr.estTermine = 1 AND pr.idEtude=@idEtude and pr.idPlage=@idPlage
     GROUP BY esp.classe, esp.ordre, esp.famille
 )
-GO
