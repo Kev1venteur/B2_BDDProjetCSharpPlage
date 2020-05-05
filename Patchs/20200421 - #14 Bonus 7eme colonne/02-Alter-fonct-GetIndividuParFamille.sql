@@ -22,7 +22,7 @@ RETURNS TABLE
 AS
 RETURN 
 (
-    select esp.classe, esp.ordre, esp.famille, COUNT(esp.nom) as "nombre d'individu", COUNT(esp.nom)/dbo.CalcSurfaceZone(zp.id) as 'Densité individu/m²' from Especes esp
+    select esp.classe, esp.ordre, COUNT(esp.famille) as "nombre de famille", COUNT(esp.nom)/dbo.CalcSurfaceZone(zp.id) as 'Densité individu/m²' from Especes esp
     JOIN Especes_Has_ZonePrelevements ehp on ehp.idEspece=esp.id
     JOIN ZonesPrelevements zp on ehp.idZone=zp.id
     JOIN Prelevements pr on pr.idZone=zp.id
