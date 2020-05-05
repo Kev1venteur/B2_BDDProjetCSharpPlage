@@ -33,7 +33,7 @@ Retrieve the project locally :
 
 Just send a pull-request 😉
 
-## Auteurs
+## Authors
 
 - <b>Augustin Ribreau</b> - <i>Developpeur</i> - [augustin.ribreau.co](https://augustin.ribreau.co/)
 - <b>Kévin Gillet</b> - <i>Developpeur</i> - [gillet.site](http://gillet.site/)
