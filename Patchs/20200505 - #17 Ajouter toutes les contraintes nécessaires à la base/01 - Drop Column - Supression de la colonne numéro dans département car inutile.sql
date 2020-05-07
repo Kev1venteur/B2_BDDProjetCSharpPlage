@@ -10,26 +10,10 @@ SET ANSI_WARNINGS ON
 COMMIT
 BEGIN TRANSACTION
 GO
-ALTER TABLE dbo.Communes
-	DROP CONSTRAINT FK_Communes_Departements
+ALTER TABLE dbo.Departements
+	DROP COLUMN numero
 GO
 ALTER TABLE dbo.Departements SET (LOCK_ESCALATION = TABLE)
 GO
 COMMIT
-select Has_Perms_By_Name(N'dbo.Departements', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'CONTROL') as Contr_Per BEGIN TRANSACTION
-GO
-ALTER TABLE dbo.Communes ADD CONSTRAINT
-	FK_Communes_Departements FOREIGN KEY
-	(
-	idDepartement
-	) REFERENCES dbo.Departements
-	(
-	id
-	) ON UPDATE  NO ACTION 
-	 ON DELETE  NO ACTION 
-	
-GO
-ALTER TABLE dbo.Communes SET (LOCK_ESCALATION = TABLE)
-GO
-COMMIT
-select Has_Perms_By_Name(N'dbo.Communes', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Communes', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Communes', 'Object', 'CONTROL') as Contr_Per 
+select Has_Perms_By_Name(N'dbo.Departements', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Departements', 'Object', 'CONTROL') as Contr_Per 
