@@ -1,14 +1,8 @@
 USE [Betterave]
 GO
-
-/****** Object:  UserDefinedFunction [dbo].[GetIndividuParFamille]    Script Date: 20/04/2020 09:28:20 ******/
-DROP FUNCTION [dbo].[GetIndividuParFamille]
-GO
-
-/****** Object:  UserDefinedFunction [dbo].[GetIndividuParFamille]    Script Date: 20/04/2020 09:28:20 ******/
+/****** Object:  UserDefinedFunction [dbo].[GetIndividuParFamille]    Script Date: 21/04/2020 12:24:13 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
