@@ -1,3 +1,16 @@
+# BDDProjetB2CSharpPlage (Codename "Betterave")
+This project consists of creating a database to meet the specifications provided by the EPSI.
+These specifications stipulate an association that needs an application to list the species found on a certain portion of a beach.  
+
+Specifications :
+https://onedrive.live.com/view.aspx?resid=CE53B17FA47F1D0F!628394&amp;ithint=file%2cdocx&amp;authkey=!AJOqL7xVG7OwrHk
+
+Project managment :
+https://onedrive.live.com/view.aspx?resid=CE53B17FA47F1D0F!628397&amp;ithint=file%2cdocx&amp;authkey=!AI0MCkgjUIpgy2k
+
+Folder structure :
+https://1drv.ms/u/s!Ag8df6R_sVPOpq1EkH3FWe61x3UNyA?e=h3SEzC
+
 # Betterave
 
 Betterave is a second year project by Kévin Gillet and Augustin Ribreau.
