@@ -1,4 +1,4 @@
-# BDDProjetB2CSharpPlage (Codename "Betterave")
+# B2_BDDProjetCSharpPlage (Codename "Betterave")
 This project consists of creating a database to meet the specifications provided by the EPSI.
 These specifications stipulate an association that needs an application to list the species found on a certain portion of a beach.  
 
